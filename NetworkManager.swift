@@ -11,7 +11,16 @@ import UIKit
 class NetworkManager{
     static let instance = NetworkManager()
     
-    func download(urlString:String, callBack:@escaping (UIImage?)->()) -> String{
+    func dataToImage(data:Data?)->UIImage?
+    {
+        if let d = data, let image = UIImage(data: d){
+            return image
+        }else{
+            return nil
+        }
+    }
+    
+    func download(urlString:String, conversionFunction:@escaping (Data?)->(UIImage?), callBack:@escaping (UIImage?)->()) -> String{
         guard let url = URL(string: urlString) else {return "Url pas bonne"}
         let urlrequest = URLRequest(url: url)
         URLSession.shared.dataTask(with: urlrequest){ data, response, err in
@@ -22,15 +31,16 @@ class NetworkManager{
                 return
             }
             
-            if let d = data {
-                DispatchQueue.main.async {
-                    callBack(UIImage(data: d))
-                }
-            }else{
-                callBack(nil)
+            DispatchQueue.main.async {
+                callBack(conversionFunction(data))
             }
+            
         }.resume()
         
         return "Success"
+    }
+    
+    func downloadImage(urlString:String, callBack:@escaping(UIImage?)->()) -> String{
+        return download(urlString: urlString, conversionFunction: dataToImage, callBack: callBack)
     }
 }

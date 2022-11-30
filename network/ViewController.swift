@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func getRandomCat(_ sender: UIButton) {
-        let res = NetworkManager.instance.download(urlString: "https://cataas.com/cat/says/hi", callBack: { image in
+        let res = NetworkManager.instance.downloadImage(urlString: "https://cataas.com/cat/says/hi", callBack: { image in
             self.imageView.image = image
         })
     }
