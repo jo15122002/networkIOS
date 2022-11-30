@@ -16,16 +16,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func getRandomCat(_ sender: UIButton) {
-        
-        if let url = URL(string: "https://cataas.com/cat/says/hello%20world!"){
-            let urlrequest = URLRequest(url: url)
-            
-            URLSession.shared.dataTask(with: urlrequest) { data, response, err in
-                if let d = data {
-                    self.imageView.image = UIImage(data: d)
-                }
-            }.resume()
-        }
+        let res = NetworkManager.instance.download(urlString: "https://cataas.com/cat/says/sike", callBack: { image in
+            self.imageView.image = image
+        })
     }
 }
 

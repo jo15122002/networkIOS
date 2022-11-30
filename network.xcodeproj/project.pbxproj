@@ -16,6 +16,7 @@
 		ED98DAB429375BDB00DDC2B5 /* networkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED98DAB329375BDB00DDC2B5 /* networkTests.swift */; };
 		ED98DABE29375BDB00DDC2B5 /* networkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED98DABD29375BDB00DDC2B5 /* networkUITests.swift */; };
 		ED98DAC029375BDB00DDC2B5 /* networkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED98DABF29375BDB00DDC2B5 /* networkUITestsLaunchTests.swift */; };
+		ED98DACD2937645E00DDC2B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED98DACC2937645E00DDC2B5 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		ED98DAB929375BDB00DDC2B5 /* networkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = networkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED98DABD29375BDB00DDC2B5 /* networkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkUITests.swift; sourceTree = "<group>"; };
 		ED98DABF29375BDB00DDC2B5 /* networkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED98DACC2937645E00DDC2B5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		ED98DA9029375BDA00DDC2B5 = {
 			isa = PBXGroup;
 			children = (
+				ED98DACC2937645E00DDC2B5 /* NetworkManager.swift */,
 				ED98DA9B29375BDA00DDC2B5 /* network */,
 				ED98DAB229375BDB00DDC2B5 /* networkTests */,
 				ED98DABC29375BDB00DDC2B5 /* networkUITests */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED98DACD2937645E00DDC2B5 /* NetworkManager.swift in Sources */,
 				ED98DAA129375BDA00DDC2B5 /* ViewController.swift in Sources */,
 				ED98DA9D29375BDA00DDC2B5 /* AppDelegate.swift in Sources */,
 				ED98DA9F29375BDA00DDC2B5 /* SceneDelegate.swift in Sources */,
